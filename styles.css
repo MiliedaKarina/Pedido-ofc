@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: #E6D6D1;
+  color: #4b3621;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #CFA79D; /* Rosa Antigo */
+  color: #fffaf5;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 3px solid #C5AA9B; /* Areia fina */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+main {
+  margin-top: 100px;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #5c4033;
+  text-shadow: 1px 1px 0 #F9EAC1; /* Champagne */
+  padding: 0 20px;
+}
+
+.yes-or-no {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.yes-or-no button {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: 2px solid #A3897B;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+}
+
+.yes-or-no .yes {
+  background: #DBB3A4; /* Nude Rosado */
+  color: #3e2f1c;
+}
+
+.yes-or-no .no {
+  background: #DAB8B3; /* Rosa Neve */
+  color: #3e2f1c;
+}
+
+.yes-or-no button:hover {
+  transform: scale(1.1);
+  background: #F9EAC1; /* Champagne */
+  color: #1b1b1b;
+}
+
+/* SURPRISE SCREEN */
+.surprise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('nós.jpg') no-repeat center center/cover;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 20;
+  animation: fadeIn 2s forwards;
+}
+
+.surprise .overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.message-box {
+  z-index: 2;
+  color: #CFA79D;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  animation: floatIn 1s ease-out forwards;
+}
+
+.message-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.message-box p {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes floatIn {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
